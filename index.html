@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="Form1">
+            <h3>CREATE AN ACCOUNT</h3>
+            <input type="text" placeholder="EMAIL" required>
+            <input type="password" placeholder="PASSWORD" required>
+            <input type="password" placeholder="CONFIRM PASSWORD" required>
+
+            <div class="btn-box">
+                <button type="button" id="nb1">NEXT</button>
+            </div>
+        </form>
+        
+        <form id="Form2">
+            <h3>SOCIAL LINKS</h3>
+            <input type="text" placeholder="Facebook">
+            <input type="text" placeholder="Github">
+            <input type="text" placeholder="Linkin">
+            
+
+            <div class="btn-box">
+                <button type="button" id="bb1">BACK</button>
+                <button type="button" id="nb2">NEXT</button>
+            </div>
+        </form>
+
+        <form id="Form3">
+            <h3>PERSONAL INFO</h3>
+            <input type="text" placeholder="FIRST NAME" required>
+            <input type="password" placeholder="LAST NAME" required>
+            <input type="password" placeholder="MOBILE NUMBER" required>
+
+            <div class="btn-box">
+                <button type="button" id="bb2">BACK</button>
+                <button type="submit">SUBMIT</button>
+            </div>
+        </form>
+
+        <div class="step-row">
+            <div id="cool-bar"></div>
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small id="step3">Step 3</small></div>
+
+        </div>
+
+    </div>
+
+    <script>
+        var Form1 = document.getElementById("Form1");
+        var Form2 = document.getElementById("Form2");
+        var Form3 = document.getElementById("Form3");
+
+        var nb1=document.getElementById("nb1");
+        var nb2=document.getElementById("nb2");
+        var bb1=document.getElementById("bb1");
+        var bb2=document.getElementById("bb2");
+
+        /*TO CREATE THE MOVING BAR*/
+
+        var coolbar=document.getElementById("cool-bar");
+
+        nb1.onclick= function(){
+            Form1.style.left = "-450px";
+            Form2.style.left= "40px";
+           coolbar.style.width="240px";
+
+        }
+
+        bb1.onclick= function(){
+            Form1.style.left ="40px";
+            Form2.style.left="450px";
+            coolbar.style.width="120px";
+            
+        }
+
+        nb2.onclick= function(){
+            Form2.style.left ="-450px";
+            Form3.style.left="40px";
+            coolbar.style.width="360px";
+            
+        }
+        bb2.onclick= function(){
+            Form2.style.left ="40px";
+            Form3.style.left="450px";
+            coolbar.style.width="240px";
+            
+        }
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
